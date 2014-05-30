@@ -1,0 +1,53 @@
+Histos: StudyGunInHGCAL_
+
+# General event 
+h1f 0 nevents ' Number of events ' 1 0.5 1.5
+
+# Generated partices
+h1f 10 gen_n   ' Number of gen particles ' 10 0 10
+h1f 11 gen_eta ' #eta_{gen} ' 100 -5. 5.
+h1f 12 gen_phi ' #phi_{gen} ' 100 -3.14159 3.14159
+h1f 13 gen_pt  ' p_{T}^{gen} ' 100 0. 50.
+
+# Simple hit distributions
+h1f 50 hit_n ' Number of hits ' 1500 0 1500
+h1f 51 hit_energy ' energy of hits ' 1000 0 1.
+h2f 52 hit_xy ' hit position ' 1000 -2000. 2000. 1000 -2000. 2000.
+h1f 53 hit_dr ' #Delta R wrt max hit ' 1000 0. 2000.
+h2f 54 hit_dxy ' hit position wrt max hit ' 1000 -2000. 2000. 1000 -2000. 2000.
+#
+1binvh2f 55 hit_dxy_eta1_vs_layer ' hit position wrt max hit ' 100 -100. 100. 100 -100. 100.
+LAYER 32
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5 17.5 18.5 19.5 20.5 21.5 22.5 23.5 24.5 25.5 26.5 27.5 28.5 29.5 30.5 31.5 32.5
+#
+1binvh2f 100 hit_dxy_eta2_vs_layer ' hit position wrt max hit ' 100 -100. 100. 100 -100. 100.
+LAYER 32
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5 17.5 18.5 19.5 20.5 21.5 22.5 23.5 24.5 25.5 26.5 27.5 28.5 29.5 30.5 31.5 32.5
+#
+1binvh2f 150 hit_dxy_eta3_vs_layer ' hit position wrt max hit ' 100 -100. 100. 100 -100. 100.
+LAYER 32
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5 17.5 18.5 19.5 20.5 21.5 22.5 23.5 24.5 25.5 26.5 27.5 28.5 29.5 30.5 31.5 32.5
+#
+1binvh2f 200 hit_dxy_eta4_vs_layer ' hit position wrt max hit ' 100 -100. 100. 100 -100. 100.
+LAYER 32
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5 17.5 18.5 19.5 20.5 21.5 22.5 23.5 24.5 25.5 26.5 27.5 28.5 29.5 30.5 31.5 32.5
+
+### Single events
+#
+2binvh2f 1000 hit_dxy_vs_layer_evt ' hit position wrt max hit ' 100 -100. 100. 100 -100. 100.
+EVENT 10
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5
+LAYER 32
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5 17.5 18.5 19.5 20.5 21.5 22.5 23.5 24.5 25.5 26.5 27.5 28.5 29.5 30.5 31.5 32.5
+#
+2binvh2f 2000 hit_xy_vs_layer_evt ' hit position ' 200 -2000. 2000. 200 -2000. 2000.
+EVENT 10
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5
+LAYER 32
+0.5 1.5 2.5 3.5 4.5 5.5 6.5 7.5 8.5 9.5 10.5 11.5 12.5 13.5 14.5 15.5 16.5 17.5 18.5 19.5 20.5 21.5 22.5 23.5 24.5 25.5 26.5 27.5 28.5 29.5 30.5 31.5 32.5
+
+end_Histos
+
+
+
+
