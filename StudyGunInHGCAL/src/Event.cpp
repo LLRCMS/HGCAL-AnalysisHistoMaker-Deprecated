@@ -55,6 +55,7 @@ void Event::connectVariables(TChain* inputChain)
 
     inputChain->SetBranchStatus("ngen"      , true);
     inputChain->SetBranchStatus("gen_id"    , true);
+    inputChain->SetBranchStatus("gen_status", true);
     inputChain->SetBranchStatus("gen_pt"    , true);
     inputChain->SetBranchStatus("gen_eta"   , true);
     inputChain->SetBranchStatus("gen_phi"   , true);
@@ -77,6 +78,7 @@ void Event::connectVariables(TChain* inputChain)
 
     inputChain->SetBranchAddress("ngen"      , &ngen);
     inputChain->SetBranchAddress("gen_id"    , gen_id);
+    inputChain->SetBranchAddress("gen_status", gen_status);
     inputChain->SetBranchAddress("gen_pt"    , gen_pt);
     inputChain->SetBranchAddress("gen_eta"   , gen_eta);
     inputChain->SetBranchAddress("gen_phi"   , gen_phi);

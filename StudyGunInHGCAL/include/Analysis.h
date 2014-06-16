@@ -25,6 +25,7 @@
 #include "EventAware.h"
 
 #include <TLorentzVector.h>
+#include <TRandom3.h>
 
 #include <string>
 #include <map>
@@ -49,8 +50,17 @@ namespace AnHiMa
             void fillHistos();
             void fillGenHistos();
             void fillHitHistos();
+            
+            void computeHitsEtaPhi();
+            void findGenParticle();
+            void matchCellToGen();
 
+            std::string m_sampleType;
+            bool m_maxHitRef;
             int m_eventCount;
+            TLorentzVector m_genParticle;
+            std::map<int, int> m_matchedHits;
+            TRandom3 m_random;
 
     };
 }

@@ -16,20 +16,25 @@ int main(int argc, char** argv)
     }
     string parFile(argv[1]);
 
-    Analysis analysis;
+    Analysis* analysis = new Analysis();
     
     try
     {
-        bool status = analysis.initialize(parFile);
+        bool status = analysis->initialize(parFile);
         if(!status)
+        {
+            delete analysis;
             return 1;
-        analysis.loop();
+        }
+        analysis->loop();
     }
     catch(string s)
     {
         cout<<"ERROR: "<<s<<"\n";
+        delete analysis;
         return 1;
     }
-
+    
+    delete analysis;
     return 0;
 }

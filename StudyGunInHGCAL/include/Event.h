@@ -31,7 +31,8 @@
 
 namespace AnHiMa
 {
-
+    static const int MAXGEN=10000;
+    static const int MAXHIT=10000000;
 
     class Event: public IEvent
     {
@@ -51,21 +52,24 @@ namespace AnHiMa
 
             // gen particles
             int   ngen;
-            int   gen_id[10];
-            float gen_pt[10];
-            float gen_eta[10];
-            float gen_phi[10];
-            float gen_en[10];
+            int   gen_id    [MAXGEN];
+            int   gen_status[MAXGEN];
+            float gen_pt    [MAXGEN];
+            float gen_eta   [MAXGEN];
+            float gen_phi   [MAXGEN];
+            float gen_en    [MAXGEN];
 
             // hits
             int   nhits;      
-            int   hit_type[10000];
-            int   hit_layer[10000];
-            int   hit_sec[10000];
-            float hit_x[10000];
-            float hit_y[10000];
-            float hit_z[10000];
-            float hit_edep[10000];
+            int   hit_type [MAXHIT];
+            int   hit_layer[MAXHIT];
+            int   hit_sec  [MAXHIT];
+            float hit_x    [MAXHIT];
+            float hit_y    [MAXHIT];
+            float hit_z    [MAXHIT];
+            float hit_eta  [MAXHIT];
+            float hit_phi  [MAXHIT];
+            float hit_edep [MAXHIT];
 
     };
 }
