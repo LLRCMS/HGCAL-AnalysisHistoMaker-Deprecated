@@ -23,6 +23,7 @@
 #include "IAnalysis.h"
 #include "Event.h"
 #include "EventAware.h"
+#include "Cluster.h"
 
 #include <TLorentzVector.h>
 #include <TRandom3.h>
@@ -50,17 +51,20 @@ namespace AnHiMa
             void fillHistos();
             void fillGenHistos();
             void fillHitHistos();
+            void fillClusterHistos();
             
             void computeHitsEtaPhi();
             void findGenParticle();
             void matchCellToGen();
+            void buildCluster();
 
             std::string m_sampleType;
             bool m_maxHitRef;
             int m_eventCount;
             TLorentzVector m_genParticle;
-            std::map<int, int> m_matchedHits;
+            int m_matchedHit;
             TRandom3 m_random;
+            Cluster m_cluster;
 
     };
 }

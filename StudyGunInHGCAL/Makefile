@@ -20,7 +20,8 @@ SRCPP = main.cpp\
 	ParReader.cpp\
 	Utilities.cpp\
 	Analysis.cpp\
-	Event.cpp
+	Event.cpp\
+	Cluster.cpp
 
 
 	
