@@ -1,6 +1,6 @@
 ## Starting on polui
 # First make sure ROOT is setup
-git clone git@github.com:LLRCMS/HGCAL-AnalysisHistoMaker.git AnHiMa
+git clone git@github.com:LLRCMS/HGCAL-AnalysisHistoMaker-Deprecated.git AnHiMa
 cd AnHiMa/StudyGunInHGCAL
 make
 ./analysis.exe run/analysis.config
